@@ -6,8 +6,6 @@ from config import  TRIP_DURATION, BUDGET_STYLE
 import os
 from dotenv import load_dotenv
 load_dotenv()
-print("GROQ KEY:", os.getenv("GROQ_API_KEY"))
-
 
 print("🇻🇳 Vietnam Travel Agent starting...\n")
 

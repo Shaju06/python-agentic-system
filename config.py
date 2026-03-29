@@ -6,6 +6,6 @@ load_dotenv()
 GROK_API_KEY = os.getenv("GROQ_API_KEY")
 LLM_MODEL = os.getenv("LLM_MODEL")
 
-TRIP_DURATION = 7  # Duration of the trip in days
+TRIP_DURATION = 7
 BUDGET_STYLE = "mid-range"
 DESTINATION = "Vietnam"
