@@ -1,0 +1,32 @@
+tasks:
+  - name: plan_itinerary
+    agent_role: Itinerary Planner
+    description: >
+      Create a complete {duration} Vietnam travel itinerary for a {budget} traveler.
+      Include: cities to visit, day-by-day activities, travel time between locations,
+      best times to visit each spot, and accommodation area recommendations.
+    expected_output: >
+      A detailed day-by-day itinerary with locations, activities, travel logistics,
+      and accommodation area suggestions for each stop.
+
+  - name: food_guide
+    agent_role: Food Explorer
+    description: >
+      Based on the itinerary provided, create a food guide for a {duration} trip 
+      on a {budget} budget. For each city in the itinerary, recommend:
+      must-try dishes, best local restaurants or street food spots, 
+      approximate meal costs, and any food experiences not to miss.
+    expected_output: >
+      A city-by-city food guide with dish recommendations, restaurant suggestions,
+      and estimated meal costs aligned with the travel itinerary.
+
+  - name: budget_breakdown
+    agent_role: Budget Advisor
+    description: >
+      Using the itinerary and food guide provided, create a full budget breakdown 
+      for a {duration} Vietnam trip on a {budget} budget. Include daily and total 
+      estimates for: accommodation, food, transport, activities, and a buffer for 
+      unexpected expenses.
+    expected_output: >
+      A complete budget breakdown table with daily averages and total trip cost,
+      covering accommodation, food, transport, activities, and contingency funds.
