@@ -1,29 +1,19 @@
-from crewai import Crew, Process
-from agents import create_travel_agent
-from tasks import create_tasks
-from config import  TRIP_DURATION, BUDGET_STYLE
+# import sys
+# from crew import create_crew
 
-import os
-from dotenv import load_dotenv
-load_dotenv()
+# duration = sys.argv[1] if len(sys.argv) > 1 else "7"
+# budget = sys.argv[2] if len(sys.argv) > 2 else "mid-range"
 
-print("🇻🇳 Vietnam Travel Agent starting...\n")
+# print(f"\n🇻🇳 Vietnam Travel Agent starting...")
+# print(f"📅 Duration: {duration} days | 💰 Budget: {budget}\n")
 
-itinerary_planner, food_explorer, budget_advisor = create_travel_agent()
+# crew = create_crew(duration=f"{duration} days", budget=budget)
+# result = crew.kickoff()
 
-tasks = create_tasks(itinerary_planner, food_explorer, budget_advisor, TRIP_DURATION, BUDGET_STYLE)
+# print("\n========== YOUR VIETNAM TRAVEL PLAN ==========\n")
+# print(result)
 
-# Assemble the crew
-crew = Crew(
-    agents=[itinerary_planner, food_explorer, budget_advisor],
-    tasks=tasks,
-    process=Process.sequential,  # agents work one after another
-    # verbose=True,
-    tracing=True
-)
+from flow import VietnamTravelFlow
 
-# Run it!
-result = crew.kickoff()
-
-print("\n========== YOUR VIETNAM TRAVEL PLAN ==========\n")
-print(result)
+flow = VietnamTravelFlow()
+flow.kickoff()
